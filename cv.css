@@ -383,6 +383,8 @@ p {
         font-weight: 600;
         line-height: 1.8rem;
     }
+    .vector1{
+        display:none;}
     .profileText h3 span {
         font-size: 0.8rem;
         font-weight: 300;
@@ -415,6 +417,8 @@ p {
         .profileText h2{
             display: block;
         }
+         .vector1{
+        display:none;}
         .profileText h2 {
             color: #fff;
             font-size: 1.5em;
