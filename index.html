@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <link rel="stylesheet" href="cv.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+    <script type="text/Javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js" defer></script>
+      <script type="text/Javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js" defer></script>
+
+      <title>Jonastino's Cv</title>
+
+    <script type="text/Javascript" src="index.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Curriculum Vitae</a>
+
+        <button class="btn" onclick="makePDF()">Télécharger</button>
+
+    </header>
+
+    <div class="container" id="container">
+        <div class="left-Side">
+            <div class="profileText">
+                <div class="imgBx">
+                    <img src="images/c.png" alt="">
+                </div>
+                    <h1>Développeur Front end React</h1>
+                    <h2>Tafitasoa Tsiky Jonastino <br>HERINIANTSONIAVO <br> <span>Développeur Web et Mobile</span></h2>
+            </div>
+
+            <div class="contactInfo">
+                <h3 class="title">INFORMATIONS PERSONNELS</h3>
+                <ul>
+                    <li>
+                        <span class="icon"><i class='bx bxs-phone' style="color: white;"></i></span>
+                        <span class="text">+261334001828</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class='bx bx-envelope' style="color: white;"></i></span>
+                        <span class="text">heryniavo@yahoo.com</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class='bx bxl-linkedin-square' style="color: white;"></i></span>
+                        <span class="text"><a href="http://linkedin.com/in/jonastino-heriniantsoniavo-531945213" style="color: white;">Jonastino Heriniantsoniavo</a></span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class='bx bxs-map' style="color: white;"></i></span>
+                        <span class="text">Mahajanga</span>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="contactInfo language">
+                <h3 class="title">LANGUES</h3>
+                <ul>
+                    <li>
+                        <span class="text">Anglais</span>
+                        <span class="percent">
+                            <div id="progression" data-progress="60%"></div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="text">Français</span>
+                        <span class="percent">
+                            <div id="progressions" data-progress="75%"></div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="text">Malgache</span>
+                        <span class="percent">
+                            <div id="progressionn" data-progress="92%"></div>
+                        </span>
+                    </li>
+                </ul>
+            </div>    
+            <div class="contactInfo interest">
+                <h2 class="title">CENTRES D'INTÉRET</h2>
+                <ul>
+                    <li><i class='bx bxs-music ' style="color: white;"></i>Activités artistiques</li>
+                    <li><i class='bx bx-code-curly' style="color: white;" ></i>Technologies et innovation</li>
+                    <li><i class='bx bx-football' style="color: white;" ></i>Activités sportives</li>
+                </ul>
+            </div>
+            <div class="contactInfo Competence">
+                <h3 class="title">Compétences</h3>
+                <ul>
+                    <li>
+                        <span class="text">Sens des responsabilités</span>
+                    </li>
+                    <li>
+                        <span class="text">Autonomie</span>
+                    </li>
+                    <li>
+                        <span class="text">Capacité d'adaptation</span>
+                    </li>
+                    <li>Polyvalence</li>
+                    <li>Rigueur</li>
+                    <li>Travail en équipe</li>
+                </ul>
+            </div>   
+            <!-- <div class='ellipse'></div>  -->
+                <div className='vector1' style="display: flex; justify-content: center;">
+                    <svg width="100" height="69" viewBox="0 0 146 89"  fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M145 67.771C120.55 71.1257 106.965 74.2897 83.5 87.7711M137 18.271C139.5 0.271137 90.2631 36.1612 64.5 87.7711C82 16.7715 62 -3.72891 46.5 3.27111C31 10.2711 32 33.771 32 33.771C41 11.2714 39.5 -5.22852 1 3.27111M78 43.7715C86.3874 31.4293 90.9566 25.0066 98.5 15.7715" stroke="#FFFFFF" strokeWidth="2" />                    </svg>
+                </div>
+                
+        </div>
+        
+        
+        <div class="right-side">
+            <div class="abouts">
+                <h3>HERINIANTSONIAVO TAFITASOA TSIKY JONASTINO</h3>
+            </div>
+            <div class="about">
+                <h2 class="title2">Profil</h2>
+                <p>J'ai une réelle passion pour le développement web et mobile,  et j'ai pu acquérir 
+                    un ensemble de compétences précieuses depuis mes débuts dans ce domaine. 
+                    Je suis à la recherche de nouveaux défis.</p>
+            </div>
+
+
+            <div class="about skills">
+                <h2 class="title2">Compétences techniques</h2>
+                <div class="box">
+                    <h4>Html/Css</h4>
+                    <div class="percent">
+                        <div style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Bootstrap</h4>
+                    <div class="percent">
+                        <div style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Tailwind</h4>
+                    <div class="percent">
+                        <div style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>React</h4>
+                    <div class="percent">
+                        <div style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>React Native</h4>
+                    <div class="percent">
+                        <div style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Adobe xd</h4>
+                    <div class="percent">
+                        <div style="width: 80%;"></div>
+                    </div>
+                </div>
+               
+                
+            </div>
+
+            <div class="about">
+                <h2 class="title2">Expérience Techniques</h2>
+                <div class="box">
+                    <div class="year_company">
+                        <h5>07 Nov 2023 - Generate a Business Card <a href="https://jonastino21.github.io/tafitasoa/" style="text-transform: lowercase; font-size: 7px;">https://jonastino21.github.io/tafitasoa/</a></h5>
+                        <p>Ce site permet aux utilisateurs de générer une carte visite à fin de présenter 
+                            sa personnalité ou son entreprise à une personne ou à une organisation.</p> 
+                            <h6>Durée de réalisation:</h6><p> 4 jours</p>
+                            <h6>Nombre de participant:</h6><p> 1</p>
+                            <h6>Technologie utilisé:</h6><p> React</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="about education">
+                <h3 class="title2">Enseignement et formation</h3>
+                <ul>
+                    <li>
+                       <h5>2021- nos jours</h5>
+                       <h4>Licence en Génie Informatique</h4>
+                       <h4>Institut Supérieur des Sciences et Technologies de Mahajanga</h4>
+                    </li>
+                    <li>
+                       <h5>2019</h5>
+                       <h4>Baccalauréat</h4>
+                       <h4>Série C</h4>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    
+    
+    </div>
+</body>
+</html>

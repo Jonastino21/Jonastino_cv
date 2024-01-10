@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/new-machiato');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth
+}
+:root{
+    --progress: 0%;
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body {
+    background: var(--second-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text-color);
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+h6{
+    color: #000000;
+    font-size: 10px;
+    font-weight: 450;
+}
+.header.sticky{
+    border-bottom: .1rem solid rgba(0, 0, 0, .2);
+}
+section{
+    min-height: 100vh;
+    color: var(--text-color);
+}
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor:pointer;
+}
+
+.navbar{
+    display: flex;
+    list-style: none ;
+}
+.navbar button{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem  ;
+    
+}
+.navbar button:hover,
+.navbar button.active {
+    color: var(--main-color);
+}
+.navbar a{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem  ;
+}
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+.btn{
+    display: inline-block;
+    padding: 1rem 1rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    letter-spacing: .1rem;
+    font-weight: 500;
+    transition: .5s ease;
+    cursor: pointer;
+}
+.btn:hover{
+     box-shadow: none;
+}
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 50px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+}
+.container .left-Side {
+    position: relative;
+    background:#003147;
+    padding: 40px;
+}
+.profileText {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.profileText h2{
+    display: none;
+}
+.profileText .imgBx {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profileText .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profileText h1 {
+    color: #00EEFF;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.8rem;
+    border: solid 1px ;
+    padding: 10px;
+    border-radius: 8px;
+}
+.contactInfo {
+    padding-top: 20px;
+}
+.title {
+    color: #00EEFF;
+    /* text-transform: uppercase; */
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.ellipse {
+    position: relative;
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+    background-color: #00EEFF;
+    top: 20px;
+    left: 30px;
+    filter: blur(80px);
+}
+.contactInfo ul {
+    position: relative;
+}
+.contactInfo ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.contactInfo ul li .icon {
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #0ef;
+}
+.contactInfo ul li span {
+    color: #fff;
+}
+
+/* .about .education li{
+    margin-bottom: 15px;
+} */
+.abouts h3{
+    margin-top: 100px;
+    position: relative;
+    left: -100px;
+    font-size: 33px;
+    font-weight: 400;
+    font-family: 'New Machiato';
+    /* background-image: linear-gradient(to left, #191615 48%, #FFFFFF 100%); */
+    background-clip: text;
+    color: #000000;
+    width: 500px;
+    
+  }
+.about.education h5 {
+    color: #000000;
+    font-weight: 500;
+}
+.about.education h4:nth-child(2){
+    color: #000000;
+    font-weight: bold;
+}
+.about.education h4{
+     color: #000000;
+    font-weight: 300;
+}
+.contactInfo.language .percent{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background-color: #081921;
+    display: block;
+    margin-top: 5px;
+}
+.contactInfo.language .percent #progression {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #0ef;
+    width: 60%;
+}
+.contactInfo.language .percent #progressions {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #0ef;
+    width: 75%;
+}
+.contactInfo.language .percent #progressionn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #0ef;
+    width: 92%;
+}
+
+.container .right-side {
+    position: relative;
+    background:#fff;
+    padding: 40px;
+    font-weight: 300;
+}
+.about {
+    margin-bottom: 50px;
+}
+.about:last-child {
+    margin-bottom: 0;
+}
+.title2 {
+    color: #DC5305;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+p {
+    color: #333;
+}
+.about h2{
+    margin-top: 50px;
+}
+.about .box {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+.about .box .year_company {
+    min-width: 150px;
+}
+.about .box .year_company h5 {
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+.about .box .text h4 {
+    text-transform: uppercase;
+    color: #0ef;
+    font-size: 16px;
+
+}
+.skills .box {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.skills .box h4 {
+    text-transform: uppercase;
+    color: #848c99;
+    font-weight: 500;
+}
+.skills .box .percent {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background:#f0f0f0;
+}
+.skills .box .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #DC5305;
+}
+.interest ul {
+    display: grid;
+    /* grid-template-columns: repeat(4,1fr); */
+}
+.interest ul li {
+    list-style: none;
+    color: #fff;
+    font-weight: 500;
+    margin: 10px 0;
+    
+}
+.interest ul li .bx {
+    /* color: #0ef; */
+    font-size: 18px;
+    width: 20px;
+    margin-right: 5px;
+}
+
+
+@media (max-width: 1000px) {
+    .profileText h1{
+        display: none;
+    }
+    .profileText h2{
+        display: block;
+    }
+    .profileText h2 {
+        color: #fff;
+        font-size: 1.5em;
+        margin-top: 20px;
+        text-align: center;
+        font-weight: 600;
+        line-height: 1.8rem;
+    }
+    .profileText h2 span {
+        font-size: 0.8rem;
+        font-weight: 300;
+    }
+    .abouts h3{
+        display: none;
+        
+      }
+    .container {
+        margin: 10px ;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .interest ul {
+        grid-template-columns: repeat(2,1fr);
+    }
+       .container .left-Side {
+    
+    padding:80px;
+}
+}
+
+@media (max-width: 600px) {
+    .profileText h3 {
+        color: #fff;
+        font-size: 1.5em;
+        margin-top: 20px;
+        text-align: center;
+        font-weight: 600;
+        line-height: 1.8rem;
+    }
+    .profileText h3 span {
+        font-size: 0.8rem;
+        font-weight: 300;
+    }
+    .abouts h3{
+        display: none;
+        
+      }
+    .profileText h2{
+        display: none;
+    }
+    .about .box {
+        flex-direction: column;
+    }
+    .about .box .year_company {
+        
+        margin-bottom: 5px;
+    }
+    .container .left-Side {
+    
+    padding:80px;
+}
+     .interest ul {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .skills .box {
+        grid-template-columns: repeat(1,1fr);
+    }
+    @media (max-width: 600px){
+        .profileText h2{
+            display: block;
+        }
+        .profileText h2 {
+            color: #fff;
+            font-size: 1.5em;
+            margin-top: 20px;
+            text-align: center;
+            font-weight: 600;
+            line-height: 1.8rem;
+        }
+        .profileText h2 span {
+            font-size: 0.8rem;
+            font-weight: 300;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
