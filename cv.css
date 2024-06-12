@@ -212,8 +212,12 @@ section{
     color: #000000;
     font-weight: bold;
 }
-.about.education h4{
+.about.education h6{
      color: #000000;
+    font-weight: bold;
+}
+h4:nth-child(2){
+    color: #000000;
     font-weight: 300;
 }
 .contactInfo.language .percent{
